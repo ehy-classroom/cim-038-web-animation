@@ -4,10 +4,43 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Dokument</title>
+
+	<style>
+
+.stage {
+width: 300px;
+height: 300px;
+background:#eee;
+}
+
+
+
+	</style>
 </head>
 <body>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+
+		<h2>JSON-Animation (springender Ball)</h2>
+		<div class="stage" id="lottie-json"></div>
+
+
+			<script>
+	// Lottie-Animation laden und abspielen:
+	// 1. Die Funktion lottie.loadAnimation() initialisiert die Animation.
+	// 2. container: Das Ziel-Element im DOM (hier das Div mit der ID 'lottie-json').
+	// 3. renderer: 'svg' sorgt für Vektor-Grafik-Ausgabe (empfohlen für Web).
+	// 4. loop: true bedeutet, die Animation läuft in Endlosschleife.
+	// 5. autoplay: true startet die Animation automatisch.
+	// 6. path: Pfad zur Lottie-JSON-Datei (relativ zum HTML-Dokument).
+	lottie.loadAnimation({
+		container: document.getElementById('lottie-json'),
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: 'assets/json/springender-ball.json'
+	});
+	</script>
 
 </body>
 </html>
