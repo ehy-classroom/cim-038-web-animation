@@ -23,15 +23,30 @@
             transform: translateX(-50%);
             left: 50%;
             top: 40px;
-            animation: bounce 2s infinite ease-in-out;
+            animation: bounce 1s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            
+            /*
+                mögliche andere Werte:
+                - statt 'infinite': 1, 2, 3, ... (Anzahl der Durchläufe)
+                - statt 'linear': ease, ease-in, ease-out, ease-in-out, steps(int), cubic-bezier(...)
+            */
+            /* Beispiel für Beschleunigung/Abdämpfung mit cubic-bezier: */
+            /* animation: bounce 1s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55); */
         }
 
+
+
         @keyframes bounce {
-            0%, 100% {
+            0% {
                 transform: translateY(0) translateX(-50%);
             }
+
             50% {
                 transform: translateY(200px) translateX(-50%);
+            }
+
+            100% {
+                transform: translateY(0) translateX(-50%);
             }
     </style>
 
